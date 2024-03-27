@@ -18,13 +18,34 @@
 
 / {
     behaviors {
+    
+        #ifndef HOMEY_HOLDING_TYPE
+        #define HOMEY_HOLDING_TYPE "tap-preferred"
+        #endif
+
+        #ifndef HOMEY_HOLDING_TIME
+        #define HOMEY_HOLDING_TIME 270
+        #endif
+
+        #ifndef HOMEY_STREAK_DECAY
+        #define HOMEY_STREAK_DECAY 170
+        #endif
+
+        #ifndef HOMEY_REPEAT_DECAY
+        #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+        #endif
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
+            flavor = HOMEY_HOLDING_TYPE;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
-            tapping-term-ms = <200>;
-            flavor = "tap-preferred";
             bindings = <&kp>, <&kp>;
         };
+
     };
 
     combos {
