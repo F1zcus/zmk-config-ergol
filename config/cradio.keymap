@@ -27,6 +27,20 @@
         };
     };
 
+    combos {
+        compatible = "zmk,combos";
+
+        ThumbEsc {
+            bindings = <&kp LC(ESC)>;
+            key-positions = <30 31>;
+        };
+
+        Esc {
+            bindings = <&kp ESC>;
+            key-positions = <11 12 13>;
+        };
+    };
+
     keymap {
         compatible = "zmk,keymap";
 
