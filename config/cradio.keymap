@@ -57,24 +57,23 @@
             bindings = <&kp>, <&kp>;
         };
 
-     dthumb: dual_thumb_layer {
-        compatible = "zmk,behavior-hold-tap";
-        label = "DUAL_THUMB_LAYER";
-        flavor = THUMB_HOLDING_TYPE;
-        tapping-term-ms = <THUMB_HOLDING_TIME>;
-        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-        #binding-cells = <2>;
-        bindings = <&kp>, <&kp>;
-    };
-
-
+        dthumb: dual_thumb_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "DUAL_THUMB_LAYER";
+            flavor =
+            THUMB_HOLDING_TYPE;
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
     };
 
     combos {
         compatible = "zmk,combos";
 
         ThumbEsc {
-            bindings = <&kp LC(ESC)>;
+            bindings = <&kp ESC>;
             key-positions = <30 31>;
         };
 
@@ -89,10 +88,10 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W            &kp E        &kp R                 &kp T                      &kp Y              &kp U                  &kp I        &kp O            &kp P
-&hm LGUI A  &hm RIGHT_ALT S  &hm LCTRL D  &hm LSHFT F           &hm LEFT_ALT G             &hm LEFT_ALT H     &hm RSHFT J            &hm RCTRL K  &hm RIGHT_ALT L  &hm LGUI SEMI
-&kp Z       &kp X            &lt 1 C      &lt 2 V               &kp B                      &kp N              &lt 2 M                &lt 1 COMMA  &kp DOT          &kp FSLH
-                                          &mt LEFT_SHIFT SPACE  &mt RIGHT_ALT BACKSPACE    &mt RIGHT_ALT TAB  &mt RIGHT_SHIFT ENTER
+&kp Q       &kp W            &kp E        &kp R                     &kp T                          &kp Y                  &kp U                      &kp I        &kp O            &kp P
+&hm LGUI A  &hm RIGHT_ALT S  &hm LCTRL D  &hm LSHFT F               &hm LEFT_ALT G                 &hm LEFT_ALT H         &hm RSHFT J                &hm RCTRL K  &hm RIGHT_ALT L  &hm LGUI SEMI
+&kp Z       &kp X            &lt 1 C      &lt 2 V                   &kp B                          &kp N                  &lt 2 M                    &lt 1 COMMA  &kp DOT          &kp FSLH
+                                          &dthumb LEFT_SHIFT SPACE  &dthumb RIGHT_ALT BACKSPACE    &dthumb RIGHT_ALT TAB  &dthumb RIGHT_SHIFT ENTER
             >;
         };
 
