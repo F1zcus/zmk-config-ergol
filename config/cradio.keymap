@@ -35,6 +35,16 @@
         #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
         #endif
 
+    #ifndef THUMB_HOLDING_TYPE
+    #define THUMB_HOLDING_TYPE "balanced"
+    #endif
+    #ifndef THUMB_HOLDING_TIME
+    #define THUMB_HOLDING_TIME 300
+    #endif
+    #ifndef THUMB_REPEAT_DECAY
+    #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    #endif
+
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
             flavor =
@@ -46,6 +56,18 @@
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
+     dthumb: dual_thumb_layer {
+        compatible = "zmk,behavior-hold-tap";
+        label = "DUAL_THUMB_LAYER";
+        flavor = THUMB_HOLDING_TYPE;
+        tapping-term-ms = <THUMB_HOLDING_TIME>;
+        quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+        #binding-cells = <2>;
+        bindings = <&kp>, <&kp>;
+    };
+
+
     };
 
     combos {
