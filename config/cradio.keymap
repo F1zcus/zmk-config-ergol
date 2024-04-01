@@ -60,13 +60,25 @@
         dthumb: dual_thumb_layer {
             compatible = "zmk,behavior-hold-tap";
             label = "DUAL_THUMB_LAYER";
-            flavor =
-            THUMB_HOLDING_TYPE;
+            flavor = THUMB_HOLDING_TYPE;
             tapping-term-ms = <THUMB_HOLDING_TIME>;
             quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
         };
+
+        thumb: miryoku_thumb_layer {
+            compatible = "zmk,behavior-hold-tap";
+            label = "MIRYOKU_THUMB_LAYER";
+            flavor = THUMB_HOLDING_TYPE;
+            tapping-term-ms = <THUMB_HOLDING_TIME>;
+            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
+            //global-quick-tap; // no typing streak
+            //retro-tap; // don't allow slow (hold-like) taps
+            #binding-cells = <2>;
+            bindings = <&mo>, <&kp>;
+        };
+
     };
 
     combos {
