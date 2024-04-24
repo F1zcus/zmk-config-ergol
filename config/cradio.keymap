@@ -47,7 +47,8 @@
 
         hm: homerow_mods {
             compatible = "zmk,behavior-hold-tap";
-            flavor = HOMEY_HOLDING_TYPE;
+            flavor =
+            HOMEY_HOLDING_TYPE;
             hold-trigger-on-release; // wait for other home row mods
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
@@ -83,7 +84,8 @@
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            flavor = HOMEY_HOLDING_TYPE;
+            flavor =
+            HOMEY_HOLDING_TYPE;
             hold-trigger-on-release;
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
@@ -97,7 +99,8 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            flavor = HOMEY_HOLDING_TYPE;
+            flavor =
+            HOMEY_HOLDING_TYPE;
             hold-trigger-on-release;
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
@@ -129,19 +132,19 @@
 
         default_layer {
             bindings = <
-&kp Q       &kp W            &kp E        &kp R           &kp T                 &kp Y              &kp U               &kp I        &kp O            &kp P
-&hml LGUI A  &hml RIGHT_ALT S  &hml LCTRL D  &hml LSHFT F     &hml LEFT_ALT G        &hmr LEFT_ALT H     &hmr RSHFT J         &hmr RCTRL K  &hmr RIGHT_ALT L  &hmr LGUI SEMI
-&kp Z       &kp X            &lt 1 C      &lt 2 V         &kp B                 &kp N              &lt 2 M             &lt 1 COMMA  &kp DOT          &kp FSLH
-                                          &thumb 2 SPACE  &thumb 1 BACKSPACE    &dthumb LSHFT TAB  &dthumb RALT ENTER
+&kp Q        &kp W             &kp E         &kp R           &kp T                 &kp Y              &kp U               &kp I         &kp O             &kp P
+&hml LGUI A  &hml RIGHT_ALT S  &hml LCTRL D  &hml LSHFT F    &hml LEFT_ALT G       &hmr LEFT_ALT H    &hmr RSHFT J        &hmr RCTRL K  &hmr RIGHT_ALT L  &hmr LGUI SEMI
+&kp Z        &kp X             &lt 1 C       &lt 2 V         &kp B                 &kp N              &lt 2 M             &lt 1 COMMA   &kp DOT           &kp FSLH
+                                             &thumb 1 SPACE  &thumb 2 BACKSPACE    &dthumb LSHFT TAB  &dthumb RALT ENTER
             >;
         };
 
         Vim {
             bindings = <
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR_ALL    &trans    &trans         &trans        &trans     &trans
-&trans        &trans        &kp ESC       &trans        &trans            &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp PRINTSCREEN
-&caps_word    &kp ESC       &trans        &trans        &trans            &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-                                          &kp ESC       &kp DELETE        &trans    &trans
+&bt BT_SEL 0   &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR_ALL    &trans    &trans         &trans        &trans     &trans
+&kp BACKSPACE  &kp LS(TAB)   &kp ESC       &kp TAB       &kp DEL           &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp PRINTSCREEN
+&caps_word     &trans        &kp ENTER     &trans        &kp LS(DEL)       &kp HOME  &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+                                           &trans        &kp DELETE        &trans    &trans
             >;
         };
 
