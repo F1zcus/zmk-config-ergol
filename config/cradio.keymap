@@ -82,6 +82,19 @@
             bindings = <&mo>, <&kp>;
         };
 
+        tapmod_thumb: miryoku_tapmod_thumb {
+            compatible = "zmk,behavior-hold-tap";
+            label = "TAP_MOD_THUMB";
+            flavor = HOMEY_HOLDING_TYPE;
+            hold-trigger-key-positions = <NO_THUMB_KEYS>;
+            hold-trigger-on-release; // wait for other home row mods
+            tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&kp>;
+        };
+
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             flavor =
