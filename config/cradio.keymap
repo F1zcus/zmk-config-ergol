@@ -35,52 +35,15 @@
         #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
         #endif
 
-    #ifndef THUMB_HOLDING_TYPE
-    #define THUMB_HOLDING_TYPE "balanced"
-    #endif
-    #ifndef THUMB_HOLDING_TIME
-    #define THUMB_HOLDING_TIME 300
-    #endif
-    #ifndef THUMB_REPEAT_DECAY
-    #define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-    #endif
-
-        hm: homerow_mods {
-            compatible = "zmk,behavior-hold-tap";
-            flavor =
-            HOMEY_HOLDING_TYPE;
-            hold-trigger-on-release; // wait for other home row mods
-            tapping-term-ms = <HOMEY_HOLDING_TIME>;
-            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        dthumb: dual_thumb_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "DUAL_THUMB_LAYER";
-            flavor =
-            THUMB_HOLDING_TYPE;
-            tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
-        };
-
-        thumb: miryoku_thumb_layer {
-            compatible = "zmk,behavior-hold-tap";
-            label = "MIRYOKU_THUMB_LAYER";
-            flavor =
-            THUMB_HOLDING_TYPE;
-            tapping-term-ms = <THUMB_HOLDING_TIME>;
-            quick-tap-ms = <THUMB_REPEAT_DECAY>; // enable repeat
-            //global-quick-tap; // no typing streak
-            //retro-tap; // don't allow slow (hold-like) taps
-
-            #binding-cells = <2>;
-            bindings = <&mo>, <&kp>;
-        };
+    //#ifndef THUMB_HOLDING_TYPE
+    //#define THUMB_HOLDING_TYPE "balanced"
+    //#endif
+    //#ifndef THUMB_HOLDING_TIME
+    //#define THUMB_HOLDING_TIME 300
+    //#endif
+    //#ifndef THUMB_REPEAT_DECAY
+    //#define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+    //#endif
 
         tapmod_thumb: miryoku_tapmod_thumb {
             compatible = "zmk,behavior-hold-tap";
@@ -116,8 +79,7 @@
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            HOMEY_HOLDING_TYPE;
+            flavor = "tap-unless-interrupted";
             hold-trigger-on-release;
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
@@ -131,8 +93,7 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            flavor =
-            HOMEY_HOLDING_TYPE;
+            flavor = "tap-unless-interrupted";
             hold-trigger-on-release;
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
