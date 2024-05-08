@@ -35,16 +35,6 @@
         #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
         #endif
 
-    //#ifndef THUMB_HOLDING_TYPE
-    //#define THUMB_HOLDING_TYPE "balanced"
-    //#endif
-    //#ifndef THUMB_HOLDING_TIME
-    //#define THUMB_HOLDING_TIME 300
-    //#endif
-    //#ifndef THUMB_REPEAT_DECAY
-    //#define THUMB_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-    //#endif
-
         tapmod_thumb: miryoku_tapmod_thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_MOD_THUMB";
@@ -79,7 +69,7 @@
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
@@ -93,7 +83,7 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             tapping-term-ms = <HOMEY_HOLDING_TIME>;
             quick-tap-ms = <HOMEY_REPEAT_DECAY>;
