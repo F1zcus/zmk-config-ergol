@@ -65,8 +65,8 @@
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            //flavor = "tap-preferred";
+            //flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             tapping-term-ms = <270>;
             quick-tap-ms = <300>;
@@ -80,8 +80,8 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "balanced";
-            //flavor = "tap-preferred";
+            //flavor = "balanced";
+            flavor = "tap-preferred";
             hold-trigger-on-release;
             tapping-term-ms = <270>;
             quick-tap-ms = <300>;
