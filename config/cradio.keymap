@@ -94,7 +94,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            repeat-timeout = -1; // Disable repeat timer
+            retro-tap;
         };
 
         layer_thumb: miryoku_home_row_layer_thumb {
@@ -109,7 +109,7 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
-            repeat-timeout = -1; // Disable repeat timer
+            retro-tap;
         };
 
         hml: hml {
