@@ -94,7 +94,6 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
-            permissive-hold;
         };
 
         layer_thumb: miryoku_home_row_layer_thumb {
@@ -109,7 +108,6 @@
             require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
-            permissive-hold;
         };
 
         hml: hml {
