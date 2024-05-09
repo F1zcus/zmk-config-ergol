@@ -19,7 +19,7 @@
 / {
     behaviors {
         #ifndef HOMEY_HOLDING_TYPE
-        #define HOMEY_HOLDING_TYPE "tap-preferred"
+        #define HOMEY_HOLDING_TYPE "balanced"
         #endif
         #ifndef HOMEY_HOLDING_TIME
         #define HOMEY_HOLDING_TIME 270
