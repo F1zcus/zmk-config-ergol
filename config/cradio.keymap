@@ -18,54 +18,56 @@
 
 / {
     behaviors {
-        #ifndef HOMEY_HOLDING_TYPE
-        #define HOMEY_HOLDING_TYPE "balanced"
-        #endif
-        #ifndef HOMEY_HOLDING_TIME
-        #define HOMEY_HOLDING_TIME 270
-        #endif
-        #ifndef HOMEY_STREAK_DECAY
-        #define HOMEY_STREAK_DECAY 170
-        #endif
-        #ifndef HOMEY_REPEAT_DECAY
-        #define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
-        #endif
+        //#ifndef HOMEY_HOLDING_TYPE
+        //#define HOMEY_HOLDING_TYPE "balanced"
+        //#endif
+        //#ifndef HOMEY_HOLDING_TIME
+        //#define HOMEY_HOLDING_TIME 270
+        //#endif
+        //#ifndef HOMEY_STREAK_DECAY
+        //#define HOMEY_STREAK_DECAY 170
+        //#endif
+        //#ifndef HOMEY_REPEAT_DECAY
+        //#define HOMEY_REPEAT_DECAY 300 // "tap then hold" for key auto-repeat
+        //#endif
         hml: hml {
-            compatible = "zmk,behavior-hold-tap";
-            flavor = HOMEY_HOLDING_TYPE;
-            hold-trigger-on-release;
-            tapping-term-ms = <HOMEY_HOLDING_TIME>;
-            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
-            #binding-cells = <2>;
-            bindings = <&kp>, <&kp>;
+            //compatible = "zmk,behavior-hold-tap";
+            //flavor = HOMEY_HOLDING_TYPE;
+            //hold-trigger-on-release;
+            //tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            //quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            //require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            //#binding-cells = <2>;
+            //bindings = <&kp>, <&kp>;
 
+            compatible = "zmk,behavior-hold-tap";
+            #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
+            bindings = <&kp>, <&kp>;
             label = "Home row left";
-            //hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 32>;
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 32>;
         };
 
         hmr: hmr {
+            //compatible = "zmk,behavior-hold-tap";
+            //flavor = HOMEY_HOLDING_TYPE;
+            //hold-trigger-on-release;
+            //tapping-term-ms = <HOMEY_HOLDING_TIME>;
+            //quick-tap-ms = <HOMEY_REPEAT_DECAY>;
+            //require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
+            //#binding-cells = <2>;
+            //bindings = <&kp>, <&kp>;
+
             compatible = "zmk,behavior-hold-tap";
-            flavor = HOMEY_HOLDING_TYPE;
-            hold-trigger-on-release;
-            tapping-term-ms = <HOMEY_HOLDING_TIME>;
-            quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-            require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
             #binding-cells = <2>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;                        // <---[[produces tap if held longer than tapping-term-ms]]
+            quick-tap-ms = <200>;
             bindings = <&kp>, <&kp>;
             label = "Home row right";
-            //hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31>;
-
-        //compatible = "zmk,behavior-hold-tap";
-        //label = "HOME_ROW_MODS_LEFT_HAND";
-        //flavor = HOMEY_HOLDING_TYPE;
-        //hold-trigger-key-positions = <RIGHT_HAND_KEYS THUMB_KEYS>;
-        //hold-trigger-on-release; // wait for other home row mods
-        //tapping-term-ms = <HOMEY_HOLDING_TIME>;
-        //quick-tap-ms = <HOMEY_REPEAT_DECAY>;
-        //require-prior-idle-ms = <HOMEY_STREAK_DECAY>;
-        //#binding-cells = <2>;
-        //bindings = <&kp>, <&kp>;
+            hold-trigger-key-positions = <0 1 2 3 4 10 11 12 13 14 20 21 22 23 24 30 31>;
         };
 
         tapmod_thumb: miryoku_tapmod_thumb {
