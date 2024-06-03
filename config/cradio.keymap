@@ -34,7 +34,6 @@
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-unless-interrupted";
-            hold-trigger-on-release;
             tapping-term-ms = <200>;
             quick-tap-ms = <250>;
 
@@ -52,7 +51,6 @@
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
             flavor = "tap-unless-interrupted";
-            hold-trigger-on-release;
             tapping-term-ms = <200>;
             quick-tap-ms = <250>;
 
