@@ -118,7 +118,19 @@
         };
     };
 
-    combos { compatible = "zmk,combos"; };
+    combos {
+        compatible = "zmk,combos";
+
+        ComboRALT {
+            bindings = <&sk RIGHT_ALT>;
+            key-positions = <32 33>;
+        };
+
+        CapsWord {
+            bindings = <&caps_word>;
+            key-positions = <30 31>;
+        };
+    };
 
     keymap {
         compatible = "zmk,keymap";
