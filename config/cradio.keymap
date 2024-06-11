@@ -158,10 +158,10 @@
 
         Vim {
             bindings = <
-&kp NUMBER_1     &kp NUMBER_2              &kp NUMBER_3         &kp NUMBER_4         &kp N5                  &kp NUMBER_6  &kp N7         &kp NUMBER_8  &kp N9     &kp N0
-&hrmcaps LGUI 0  &hml RIGHT_ALT BACKSPACE  &hml LCTRL ESCAPE    &hml LEFT_SHIFT TAB  &hml LEFT_ALT DELETE    &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp PRINTSCREEN
-&caps_word       &kp D                     &hml LEFT_ALT ENTER  &kp Y                &caps_word              &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-                                                                &trans               &trans                  &trans        &trans
+&kp NUMBER_1     &kp NUMBER_2              &kp NUMBER_3         &kp NUMBER_4         &kp N5                  &kp NUMBER_6              &kp N7                       &kp NUMBER_8             &kp N9           &kp N0
+&hrmcaps LGUI 0  &hml RIGHT_ALT BACKSPACE  &hml LCTRL ESCAPE    &hml LEFT_SHIFT TAB  &hml LEFT_ALT DELETE    &hmr LEFT_ALT LEFT_ARROW  &hmr RIGHT_SHIFT DOWN_ARROW  &hmr RCTRL UP_ARROW      &hmr RALT RIGHT  &hmr LEFT_GUI PRINTSCREEN
+&caps_word       &kp D                     &hml LEFT_ALT ENTER  &kp Y                &caps_word              &kp HOME                  &kp PAGE_DOWN                &hmr LEFT_ALT PAGE_DOWN  &kp END          &trans
+                                                                &trans               &trans                  &trans                    &trans
             >;
         };
 
