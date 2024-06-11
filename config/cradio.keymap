@@ -116,6 +116,18 @@
             tapping-term-ms = <500>;
             flavor = "tap-preferred";
         };
+
+        hrmcaps: hrmcaps {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "tap-preferred";
+            tapping-term-ms = <200>;
+            quick-tap-ms = <250>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&caps_word>;
+
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;
+            label = "HRMCAPS";
+        };
     };
 
     combos {
@@ -146,10 +158,10 @@
 
         Vim {
             bindings = <
-&kp NUMBER_1    &kp NUMBER_2   &kp NUMBER_3  &kp NUMBER_4  &kp N5        &kp NUMBER_6  &kp N7         &kp NUMBER_8  &kp N9     &kp N0
-&kp LEFT_SHIFT  &kp BACKSPACE  &kp ESCAPE    &kp TAB       &kp DELETE    &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp PRINTSCREEN
-&caps_word      &kp D          &kp ENTER     &kp Y         &caps_word    &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
-                                             &trans        &trans        &trans        &trans
+&kp NUMBER_1     &kp NUMBER_2              &kp NUMBER_3         &kp NUMBER_4         &kp N5                  &kp NUMBER_6  &kp N7         &kp NUMBER_8  &kp N9     &kp N0
+&hrmcaps LGUI 0  &hml RIGHT_ALT BACKSPACE  &hml LCTRL ESCAPE    &hml LEFT_SHIFT TAB  &hml LEFT_ALT DELETE    &kp LEFT      &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp PRINTSCREEN
+&caps_word       &kp D                     &hml LEFT_ALT ENTER  &kp Y                &caps_word              &kp HOME      &kp PAGE_DOWN  &kp PAGE_UP   &kp END    &trans
+                                                                &trans               &trans                  &trans        &trans
             >;
         };
 
