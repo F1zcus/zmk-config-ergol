@@ -159,7 +159,7 @@
 
         Vim {
             bindings = <
-&kp NUMBER_1     &kp NUMBER_2              &kp NUMBER_3         &kp NUMBER_4         &kp N5                  &kp NUMBER_6              &kp N7                       &kp NUMBER_8             &kp N9           &kp N0
+&trans           &trans                    &trans               &trans               &trans                  &trans                    &trans                       &trans                   &trans           &trans
 &hrmcaps LGUI 0  &hml RIGHT_ALT BACKSPACE  &hml LCTRL ESCAPE    &hml LEFT_SHIFT TAB  &hml LEFT_ALT DELETE    &hmr LEFT_ALT LEFT_ARROW  &hmr RIGHT_SHIFT DOWN_ARROW  &hmr RCTRL UP_ARROW      &hmr RALT RIGHT  &hmr LEFT_GUI PRINTSCREEN
 &caps_word       &kp D                     &hml LEFT_ALT ENTER  &kp Y                &caps_word              &kp HOME                  &kp PAGE_DOWN                &hmr LEFT_ALT PAGE_DOWN  &kp END          &trans
                                                                 &trans               &trans                  &trans                    &layer_thumb 3 ENTER
@@ -170,7 +170,7 @@
             bindings = <
 &kp LS(NUMBER_1)    &kp LS(NUMBER_2)         &kp LS(NUMBER_3)     &kp LS(NUMBER_4)      &kp LS(N5)                &kp LS(NUMBER_6)        &kp LS(N7)     &kp LS(N8)     &kp LS(N9)         &kp LS(N0)
 &hml LGUI NUMBER_1  &hml RIGHT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHFT NUMBER_4   &hml LEFT_ALT NUMBER_5    &hmr LEFT_ALT NUMBER_6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RIGHT_ALT N9  &hmr LGUI N0
-&kp F1              &kp F2                   &hml LALT F3         &kp F4                &kp F5                    &kp F6                  &kp F7         &hmr LALT F8   &kp F9             &kp F10
+&trans              &trans                   &trans               &trans                &trans                    &trans                  &trans         &trans         &trans             &trans
                                                                   &layer_thumb 3 SPACE  &trans                    &trans                  &kp ENTER
             >;
         };
@@ -178,7 +178,7 @@
         Fn-Media {
             bindings = <
 &kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
-&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR_ALL    &kp M   &kp Y              &kp SLASH        &kp H       &trans
+&bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR_ALL    &trans  &trans             &trans           &trans      &trans
 &trans        &trans        &kp F11       &kp F12       &trans            &trans  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP  &kp C_MUTE  &trans
                                           &kp SPACE     &trans            &trans  &kp ENTER
             >;
