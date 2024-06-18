@@ -143,6 +143,11 @@
             bindings = <&caps_word>;
             key-positions = <30 31>;
         };
+
+        FnLayer {
+            bindings = <&mo 3>;
+            key-positions = <30 33>;
+        };
     };
 
     keymap {
