@@ -33,9 +33,9 @@
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <250>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
 
             //require-prior-idle-ms = <170>;
 
@@ -50,9 +50,9 @@
 
         hmr: hmr {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
-            tapping-term-ms = <200>;
-            quick-tap-ms = <250>;
+            flavor = "tap-unless-interrupted";
+            tapping-term-ms = <100>;
+            quick-tap-ms = <200>;
 
             //require-prior-idle-ms = <170>;
 
@@ -147,6 +147,11 @@
         FnLayer {
             bindings = <&mo 3>;
             key-positions = <30 33>;
+        };
+
+        FastEsc {
+            bindings = <&kp ESC>;
+            key-positions = <12 30>;
         };
     };
 
