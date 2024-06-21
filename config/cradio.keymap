@@ -182,7 +182,7 @@
             bindings = <
 &kp LS(NUMBER_1)    &kp LS(NUMBER_2)         &kp LS(NUMBER_3)     &kp LS(NUMBER_4)     &kp LS(N5)                &kp LS(NUMBER_6)        &kp LS(N7)     &kp LS(N8)     &kp LS(N9)         &kp LS(N0)
 &hml LGUI NUMBER_1  &hml RIGHT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHFT NUMBER_4  &hml LEFT_ALT NUMBER_5    &hmr LEFT_ALT NUMBER_6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RIGHT_ALT N9  &hmr LGUI N0
-&trans              &trans                   &trans               &trans               &trans                    &trans                  &trans         &trans         &trans             &trans
+&kp F1        &kp F2        &kp F3        &kp F4        &kp F5            &kp F6  &kp F7             &kp F8           &kp F9      &kp F10
                                                                   &trans               &trans                    &trans                  &trans
             >;
         };
