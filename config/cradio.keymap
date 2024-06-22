@@ -170,12 +170,12 @@
 
         FastTab {
             bindings = <&kp TAB>;
-            key-positions = <30 11>;
+            key-positions = <30 13>;
         };
 
         FastBackTab {
             bindings = <&kp TAB>;
-            key-positions = <30 10>;
+            key-positions = <30 11>;
         };
 
         FastDelete {
@@ -185,12 +185,7 @@
 
         FastBackspace {
             bindings = <&kp BACKSPACE>;
-            key-positions = <30 13>;
-        };
-
-        FnLayerRight {
-            bindings = <&mo 3>;
-            key-positions = <32 33>;
+            key-positions = <30 10>;
         };
     };
 
@@ -199,19 +194,19 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W             &kp E         &kp R                 &kp T                                 &kp Y                              &kp U                           &kp I            &kp O             &kp P
-&hml LGUI A  &hml RIGHT_ALT S  &hml LCTRL D  &hml LSHFT F          &hml LEFT_ALT G                       &hmr LEFT_ALT H                    &hmr RSHFT J                    &hmr RCTRL K     &hmr RIGHT_ALT L  &hmr LGUI SEMI
-&kp Z        &kp X             &hml LALT C   &kp V                 &kp B                                 &kp N                              &kp M                           &hmr LALT COMMA  &kp PERIOD        &kp FSLH
-                                             &layer_thumb 1 SPACE  &sticky_layer_thumb 2 LEFT_CONTROL    &sticky_thumb RIGHT_ALT RIGHT_ALT  &tapmod_thumb LEFT_SHIFT ENTER
+&kp Q        &kp W             &kp E         &kp R                 &kp T                       &kp Y                              &kp U                           &kp I            &kp O             &kp P
+&hml LGUI A  &hml RIGHT_ALT S  &hml LCTRL D  &hml LSHFT F          &hml LEFT_ALT G             &hmr LEFT_ALT H                    &hmr RSHFT J                    &hmr RCTRL K     &hmr RIGHT_ALT L  &hmr LGUI SEMI
+&kp Z        &kp X             &hml LALT C   &kp V                 &kp B                       &kp N                              &kp M                           &hmr LALT COMMA  &kp PERIOD        &kp FSLH
+                                             &layer_thumb 1 SPACE  &layer_thumb 2 BACKSPACE    &sticky_thumb RIGHT_ALT RIGHT_ALT  &tapmod_thumb LEFT_SHIFT ENTER
             >;
         };
 
         Nav {
             bindings = <
-&trans             &trans              &trans               &trans                     &trans                  &trans                    &trans                       &trans                   &trans           &trans
-&hml LGUI LS(TAB)  &hml RIGHT_ALT TAB  &hml LCTRL ESCAPE    &hml LEFT_SHIFT BACKSPACE  &hml LEFT_ALT DELETE    &hmr LEFT_ALT LEFT_ARROW  &hmr RIGHT_SHIFT DOWN_ARROW  &hmr RCTRL UP_ARROW      &hmr RALT RIGHT  &hmr LEFT_GUI PRINTSCREEN
-&caps_word         &kp D               &hml LEFT_ALT ENTER  &kp Y                      &caps_word              &kp HOME                  &kp PAGE_DOWN                &hmr LEFT_ALT PAGE_DOWN  &kp END          &trans
-                                                            &trans                     &trans                  &trans                    &trans
+&trans               &trans                  &trans               &trans               &trans                  &trans                    &trans                       &trans                   &trans           &trans
+&hml LGUI BACKSPACE  &hml RIGHT_ALT LS(TAB)  &hml LCTRL ESCAPE    &hml LEFT_SHIFT TAB  &hml LEFT_ALT DELETE    &hmr LEFT_ALT LEFT_ARROW  &hmr RIGHT_SHIFT DOWN_ARROW  &hmr RCTRL UP_ARROW      &hmr RALT RIGHT  &hmr LEFT_GUI PRINTSCREEN
+&caps_word           &kp D                   &hml LEFT_ALT ENTER  &kp Y                &caps_word              &kp HOME                  &kp PAGE_DOWN                &hmr LEFT_ALT PAGE_DOWN  &kp END          &trans
+                                                                  &trans               &trans                  &trans                    &trans
             >;
         };
 
