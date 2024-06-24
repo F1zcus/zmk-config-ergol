@@ -192,10 +192,10 @@
 
         default_layer {
             bindings = <
-&kp Q        &kp W             &kp E         &kp R                 &kp T                       &kp Y                              &kp U                           &kp I            &kp O             &kp P
-&hml LGUI A  &hml RIGHT_ALT S  &hml LCTRL D  &hml LSHFT F          &hml LEFT_ALT G             &hmr LEFT_ALT H                    &hmr RSHFT J                    &hmr RCTRL K     &hmr RIGHT_ALT L  &hmr LGUI SEMI
-&kp Z        &kp X             &hml LALT C   &kp V                 &kp B                       &kp N                              &kp M                           &hmr LALT COMMA  &kp PERIOD        &kp FSLH
-                                             &layer_thumb 1 SPACE  &layer_thumb 2 BACKSPACE    &sticky_thumb RIGHT_ALT RIGHT_ALT  &tapmod_thumb LEFT_SHIFT ENTER
+&kp Q        &kp W             &kp E         &kp R                 &kp T                                  &kp Y                              &kp U                 &kp I            &kp O             &kp P
+&hml LGUI A  &hml RIGHT_ALT S  &hml LCTRL D  &hml LSHFT F          &hml LEFT_ALT G                        &hmr LEFT_ALT H                    &hmr RSHFT J          &hmr RCTRL K     &hmr RIGHT_ALT L  &hmr LGUI SEMI
+&kp Z        &kp X             &hml LALT C   &kp V                 &kp B                                  &kp N                              &kp M                 &hmr LALT COMMA  &kp PERIOD        &kp FSLH
+                                             &layer_thumb 1 SPACE  &sticky_thumb LEFT_SHIFT LEFT_SHIFT    &sticky_thumb RIGHT_ALT RIGHT_ALT  &layer_thumb 2 ENTER
             >;
         };
 
@@ -213,7 +213,7 @@
 &kp LS(NUMBER_1)    &kp LS(NUMBER_2)         &kp LS(NUMBER_3)     &kp LS(NUMBER_4)     &kp LS(N5)                &kp LS(NUMBER_6)        &kp LS(N7)     &kp LS(N8)     &kp LS(N9)         &kp LS(N0)
 &hml LGUI NUMBER_1  &hml RIGHT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHFT NUMBER_4  &hml LEFT_ALT NUMBER_5    &hmr LEFT_ALT NUMBER_6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RIGHT_ALT N9  &hmr LGUI N0
 &kp F1              &kp F2                   &kp F3               &kp F4               &kp F5                    &kp F6                  &kp F7         &kp F8         &kp F9             &kp F10
-                                                                  &trans               &trans                    &kp F11                 &kp F12
+                                                                  &kp F11              &kp F12                   &kp F11                 &kp F12
             >;
         };
 
