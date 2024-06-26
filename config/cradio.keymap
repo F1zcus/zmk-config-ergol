@@ -186,10 +186,10 @@
 
         Nav {
             bindings = <
-&trans                &trans               &kp PAGE_UP              &trans               &trans           &trans                            &trans                       &trans                   &trans           &trans
-&hml LEFT_GUI DELETE  &hml RIGHT_ALT HOME  &hml LCTRL ESCAPE        &hml LEFT_SHIFT END  &kp BACKSPACE    &hmr LEFT_ALT LEFT_ARROW          &hmr RIGHT_SHIFT DOWN_ARROW  &hmr RCTRL UP_ARROW      &hmr RALT RIGHT  &hmr LEFT_GUI PRINTSCREEN
-&caps_word            &trans               &hml LEFT_ALT PAGE_DOWN  &trans               &caps_word       &kp HOME                          &kp PAGE_DOWN                &hmr LEFT_ALT PAGE_DOWN  &kp END          &trans
-                                                                    &trans               &trans           &tapmod_thumb LEFT_SHIFT LS(TAB)  &trans
+&trans              &trans                 &kp PAGE_UP              &trans                     &trans        &trans                            &trans                       &trans                   &trans           &trans
+&hml LEFT_GUI HOME  &hml RIGHT_ALT DELETE  &hml LCTRL ESCAPE        &hml LEFT_SHIFT BACKSPACE  &kp END       &hmr LEFT_ALT LEFT_ARROW          &hmr RIGHT_SHIFT DOWN_ARROW  &hmr RCTRL UP_ARROW      &hmr RALT RIGHT  &hmr LEFT_GUI PRINTSCREEN
+&caps_word          &trans                 &hml LEFT_ALT PAGE_DOWN  &trans                     &caps_word    &kp HOME                          &kp PAGE_DOWN                &hmr LEFT_ALT PAGE_DOWN  &kp END          &trans
+                                                                    &trans                     &trans        &tapmod_thumb LEFT_SHIFT LS(TAB)  &trans
             >;
         };
 
