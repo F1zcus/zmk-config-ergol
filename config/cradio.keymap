@@ -69,7 +69,7 @@
             require-prior-idle-ms = <100>;
         };
 
-        tapmod_thumb: miryoku_tapmod_thumb {
+        tapmod_thumb: tapmod_thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_MOD_THUMB";
             flavor = "hold-preferred";
@@ -83,6 +83,8 @@
             bindings = <&kp>, <&kp>;
 
             //retro-tap;
+
+            require-prior-idle-ms = <100>;
         };
 
         layer_thumb: miryoku_home_row_layer_thumb {
@@ -100,6 +102,7 @@
             //retro-tap;
 
             quick-tap-ms = <100>;
+            require-prior-idle-ms = <50>;
         };
 
         taphold: taphold {
