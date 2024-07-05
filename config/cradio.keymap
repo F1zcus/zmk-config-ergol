@@ -72,9 +72,9 @@
         tapmod_thumb: tapmod_thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_MOD_THUMB";
-            flavor = "balanced"; // wait for other home row mods
-            tapping-term-ms = <300>;
-            quick-tap-ms = <150>;
+            flavor = "hold-preferred"; // wait for other home row mods
+            tapping-term-ms = <200>;
+            quick-tap-ms = <200>;
 
             //require-prior-idle-ms = <170>;
 
@@ -87,8 +87,8 @@
         layer_thumb: layer_thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_LAYER_THUMB";
-            flavor = "balanced"; // wait for other home row mods
-            tapping-term-ms = <300>;
+            flavor = "hold-preferred"; // wait for other home row mods
+            tapping-term-ms = <200>;
 
             //require-prior-idle-ms = <170>;
 
@@ -97,7 +97,8 @@
 
             //retro-tap;
 
-            quick-tap-ms = <150>;
+            quick-tap-ms = <200>;
+            hold-trigger-key-positions = <12 13 11 15 16 17 18 19 14 10>;
         };
     };
 
@@ -134,10 +135,10 @@
 
         Nav {
             bindings = <
-&trans              &trans                 &kp PAGE_UP              &trans                     &trans        &trans                            &trans                       &trans                   &trans           &trans
-&hml LEFT_GUI HOME  &hml RIGHT_ALT DELETE  &hml LCTRL ESCAPE        &hml LEFT_SHIFT BACKSPACE  &kp END       &hmr LEFT_ALT LEFT_ARROW          &hmr RIGHT_SHIFT DOWN_ARROW  &hmr RCTRL UP_ARROW      &hmr RALT RIGHT  &hmr LEFT_GUI PRINTSCREEN
-&caps_word          &trans                 &hml LEFT_ALT PAGE_DOWN  &trans                     &caps_word    &kp HOME                          &kp PAGE_DOWN                &hmr LEFT_ALT PAGE_DOWN  &kp END          &trans
-                                                                    &trans                     &trans        &tapmod_thumb LEFT_SHIFT LS(TAB)  &trans
+&trans      &trans                 &trans             &trans                     &trans        &trans                            &trans                       &trans                   &trans           &trans
+&trans      &hml RIGHT_ALT DELETE  &hml LCTRL ESCAPE  &hml LEFT_SHIFT BACKSPACE  &trans        &hmr LEFT_ALT LEFT_ARROW          &hmr RIGHT_SHIFT DOWN_ARROW  &hmr RCTRL UP_ARROW      &hmr RALT RIGHT  &hmr LEFT_GUI PRINTSCREEN
+&caps_word  &trans                 &trans             &trans                     &caps_word    &kp HOME                          &kp PAGE_DOWN                &hmr LEFT_ALT PAGE_DOWN  &kp END          &trans
+                                                      &trans                     &trans        &tapmod_thumb LEFT_SHIFT LS(TAB)  &trans
             >;
         };
 
