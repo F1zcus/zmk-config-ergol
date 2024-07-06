@@ -33,7 +33,7 @@
 
         hml: hml {
             compatible = "zmk,behavior-hold-tap";
-            flavor = "tap-preferred";
+            flavor = "balanced";
             tapping-term-ms = <200>;
             quick-tap-ms = <150>;
 
@@ -46,7 +46,6 @@
             //hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 33 32>;
 
             hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33>;
-            hold-trigger-on-release;
         };
 
         hmr: hmr {
@@ -70,7 +69,7 @@
         tapmod_thumb: tapmod_thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_MOD_THUMB";
-            flavor = "hold-preferred"; // wait for other home row mods
+            flavor = "balanced"; // wait for other home row mods
             tapping-term-ms = <150>;
             quick-tap-ms = <100>;
 
