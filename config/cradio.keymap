@@ -70,7 +70,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_MOD_THUMB";
             flavor = "balanced"; // wait for other home row mods
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
             quick-tap-ms = <100>;
 
             //require-prior-idle-ms = <170>;
@@ -85,7 +85,7 @@
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_LAYER_THUMB";
             flavor = "hold-preferred"; // wait for other home row mods
-            tapping-term-ms = <150>;
+            tapping-term-ms = <200>;
 
             //require-prior-idle-ms = <170>;
 
