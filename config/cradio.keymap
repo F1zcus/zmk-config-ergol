@@ -44,8 +44,8 @@
         tapmod_thumb: tapmod_thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "TAP_MOD_THUMB";
-            flavor = "balanced"; // wait for other home row mods
-            tapping-term-ms = <200>;
+            flavor = "tap-preferred"; // wait for other home row mods
+            tapping-term-ms = <250>;
             quick-tap-ms = <200>;
             #binding-cells = <2>;
             bindings = <&kp>, <&kp>;
@@ -54,8 +54,8 @@
         layer_thumb: layer_thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_LAYER_THUMB";
-            flavor = "balanced"; // wait for other home row mods
-            tapping-term-ms = <200>;
+            flavor = "tap-preferred"; // wait for other home row mods
+            tapping-term-ms = <250>;
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
 
