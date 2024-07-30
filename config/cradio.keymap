@@ -77,7 +77,7 @@
         layer_sticky: layer_sticky {
             compatible = "zmk,behavior-hold-tap";
             label = "LAYER_STICKY";
-            flavor = "tap-unless-interrupted";
+            flavor = "tap-preferred";
             tapping-term-ms = <200>;
             #binding-cells = <2>;
             bindings = <&mo>, <&sk>;
