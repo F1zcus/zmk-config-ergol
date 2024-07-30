@@ -54,7 +54,7 @@
         layer_thumb: layer_thumb {
             compatible = "zmk,behavior-hold-tap";
             label = "HOME_ROW_LAYER_THUMB";
-            flavor = "tap-unless-interrupted"; // wait for other home row mods
+            flavor = "tap-preferred"; // wait for other home row mods
             tapping-term-ms = <200>;
             #binding-cells = <2>;
             bindings = <&mo>, <&kp>;
