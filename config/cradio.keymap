@@ -96,7 +96,7 @@
         };
 
         Del {
-            bindings = <&kp DELETE>;
+            bindings = <&mt RIGHT_ALT DELETE>;
             key-positions = <33 32>;
         };
     };
@@ -106,19 +106,19 @@
 
         default_layer {
             bindings = <
-&kp Q  &kp W  &kp E  &kp R                 &kp T                       &kp Y               &kp U                 &kp I      &kp O       &kp P
-&kp A  &kp S  &kp D  &kp F                 &kp G                       &kp H               &kp J                 &kp K      &kp L       &kp SEMICOLON
-&kp Z  &kp X  &kp C  &kp V                 &kp B                       &kp N               &kp M                 &kp COMMA  &kp PERIOD  &kp FSLH
-                     &layer_thumb 4 SPACE  &layer_thumb 1 BACKSPACE    &layer_thumb 2 TAB  &layer_thumb 5 ENTER
+&kp Q           &kp W            &kp E               &kp R                 &kp T      &kp Y                 &kp U                     &kp I                &kp O                &kp P
+&mt LEFT_GUI A  &mt RIGHT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F      &kp G      &kp H                 &mt RIGHT_SHIFT J         &mt RIGHT_CONTROL K  &mt RIGHT_ALT L      &mt RIGHT_GUI SEMICOLON
+&kp Z           &mt LEFT_ALT X   &kp C               &kp V                 &kp B      &kp N                 &kp M                     &kp COMMA            &mt LEFT_ALT PERIOD  &kp FSLH
+                                                     &layer_thumb 1 SPACE  &kp TAB    &mt LEFT_SHIFT ENTER  &layer_thumb 2 BACKSPACE
             >;
         };
 
         Nav {
             bindings = <
-&trans                     &trans                       &trans               &trans                         &trans    &trans    &trans         &trans         &trans     &trans
-&Callum LEFT_GUI LEFT_GUI  &Callum RIGHT_ALT RIGHT_ALT  &Callum LCTRL LCTRL  &Callum LEFT_SHIFT LEFT_SHIFT  &trans    &kp LEFT  &kp DOWN       &kp UP_ARROW   &kp RIGHT  &kp PRINTSCREEN
-&trans                     &trans                       &trans               &trans                         &trans    &kp HOME  &kp PAGE_DOWN  &kp PAGE_DOWN  &kp END    &trans
-                                                                             &trans                         &trans    &trans    &trans
+&trans  &trans  &trans  &trans  &trans    &kp K_PASTE  &kp K_COPY     &kp K_CUT      &kp K_UNDO  &kp PRINTSCREEN
+&trans  &trans  &trans  &trans  &trans    &kp LEFT     &kp DOWN       &kp UP_ARROW   &kp RIGHT   &kp CAPS
+&trans  &trans  &trans  &trans  &trans    &kp HOME     &kp PAGE_DOWN  &kp PAGE_DOWN  &kp END     &kp INSERT
+                        &trans  &trans    &trans       &trans
             >;
         };
 
