@@ -99,6 +99,11 @@
             bindings = <&mt RIGHT_ALT DELETE>;
             key-positions = <33 32>;
         };
+
+        Media {
+            bindings = <&mo 3>;
+            key-positions = <30 33>;
+        };
     };
 
     keymap {
@@ -106,10 +111,10 @@
 
         default_layer {
             bindings = <
-&kp Q           &kp W            &kp E               &kp R                 &kp T      &kp Y                 &kp U                     &kp I                &kp O                &kp P
-&mt LEFT_GUI A  &mt RIGHT_ALT S  &mt LEFT_CONTROL D  &mt LEFT_SHIFT F      &kp G      &kp H                 &mt RIGHT_SHIFT J         &mt RIGHT_CONTROL K  &mt RIGHT_ALT L      &mt RIGHT_GUI SEMICOLON
-&kp Z           &mt LEFT_ALT X   &kp C               &kp V                 &kp B      &kp N                 &kp M                     &kp COMMA            &mt LEFT_ALT PERIOD  &kp FSLH
-                                                     &layer_thumb 1 SPACE  &kp TAB    &mt LEFT_SHIFT ENTER  &layer_thumb 2 BACKSPACE
+&kp Q            &kp W             &kp E                &kp R              &kp T      &kp Y                 &kp U               &kp I                 &kp O                 &kp P
+&hml LEFT_GUI A  &hml RIGHT_ALT S  &hml LEFT_CONTROL D  &hml LEFT_SHIFT F  &kp G      &kp H                 &hmr RIGHT_SHIFT J  &hmr RIGHT_CONTROL K  &hmr RIGHT_ALT L      &hmr RIGHT_GUI SEMICOLON
+&kp Z            &hml LEFT_ALT X   &kp C                &kp V              &kp B      &kp N                 &kp M               &kp COMMA             &hmr LEFT_ALT PERIOD  &kp FSLH
+                                                        &lt 1 SPACE        &kp TAB    &mt LEFT_SHIFT ENTER  &lt 2 BACKSPACE
             >;
         };
 
@@ -124,10 +129,10 @@
 
         Numeric {
             bindings = <
-&kp LS(NUMBER_1)    &kp LS(NUMBER_2)         &kp LS(NUMBER_3)     &kp LS(NUMBER_4)     &kp LS(N5)                &kp LS(NUMBER_6)        &kp LS(N7)     &kp LS(N8)     &kp LS(N9)         &kp LS(N0)
-&hml LGUI NUMBER_1  &hml RIGHT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHFT NUMBER_4  &hml LEFT_ALT NUMBER_5    &hmr LEFT_ALT NUMBER_6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RIGHT_ALT N9  &hmr LGUI N0
-&kp F1              &kp F2                   &kp F3               &kp F4               &kp F5                    &kp F6                  &kp F7         &kp F8         &kp F9             &kp F10
-                                                                  &kp F11              &kp F12                   &kp F11                 &kp F12
+&kp LS(NUMBER_1)    &kp LS(NUMBER_2)         &kp LS(NUMBER_3)     &kp LS(NUMBER_4)     &kp LS(N5)    &kp LS(NUMBER_6)  &kp LS(N7)     &kp LS(N8)     &kp LS(N9)         &kp LS(N0)
+&hml LGUI NUMBER_1  &hml RIGHT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHFT NUMBER_4  &kp N5        &kp LEFT_ALT      &hmr RSHFT N7  &hmr RCTRL N8  &hmr RIGHT_ALT N9  &hmr LGUI N0
+&kp F1              &hml LEFT_ALT F2         &kp F3               &kp F4               &kp F5        &kp F6            &kp F7         &kp F8         &hmr LALT F9       &kp F10
+                                                                  &kp F11              &kp F12       &kp F11           &kp F12
             >;
         };
 
@@ -137,24 +142,6 @@
 &bt BT_SEL 0  &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_CLR_ALL    &trans  &kp C_VOLUME_DOWN  &kp C_MUTE  &kp C_VOLUME_UP  &trans
 &trans        &trans        &trans        &trans        &trans            &trans  &trans             &trans      &trans           &trans
                                           &trans        &trans            &trans  &trans
-            >;
-        };
-
-        CallumLeft {
-            bindings = <
-&trans                     &trans                       &trans                 &trans                         &trans    &trans  &trans  &trans  &trans  &trans
-&Callum LEFT_GUI LEFT_GUI  &Callum RIGHT_ALT RIGHT_ALT  &Callum LCTRL LCTRL    &Callum LEFT_SHIFT LEFT_SHIFT  &trans    &trans  &trans  &trans  &trans  &trans
-&trans                     &trans                       &Callum LALT LEFT_ALT  &trans                         &trans    &trans  &trans  &trans  &trans  &trans
-                                                                               &trans                         &trans    &trans  &trans
-            >;
-        };
-
-        CallumRight {
-            bindings = <
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                           &trans                               &trans                       &trans
-&trans  &trans  &trans  &trans  &trans    &trans  &Callum RIGHT_SHIFT RIGHT_SHIFT  &Callum RIGHT_CONTROL RIGHT_CONTROL  &Callum RIGHT_ALT RIGHT_ALT  &Callum RIGHT_GUI RIGHT_GUI
-&trans  &trans  &trans  &trans  &trans    &trans  &trans                           &Callum LEFT_ALT LEFT_ALT            &trans                       &trans
-                        &trans  &trans    &trans  &trans
             >;
         };
     };
