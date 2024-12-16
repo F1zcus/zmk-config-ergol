@@ -124,8 +124,8 @@
     combos {
         compatible = "zmk,combos";
 
-        Mouse {
-            bindings = <&mo 4>;
+        Esc {
+            bindings = <&kp ESCAPE>;
             key-positions = <31 30>;
         };
 
