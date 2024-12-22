@@ -121,6 +121,16 @@
             bindings = <&kp SLASH>;
             key-positions = <28 27>;
         };
+
+        BestB {
+            bindings = <&kp B>;
+            key-positions = <4 14>;
+        };
+
+        BestDot {
+            bindings = <&kp N>;
+            key-positions = <15 5>;
+        };
     };
 
     macros {
