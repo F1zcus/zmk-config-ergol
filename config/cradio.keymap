@@ -119,6 +119,20 @@
             hold-trigger-on-release;
             label = "HRLT";
         };
+
+        hroa: hroa {
+            compatible = "zmk,behavior-hold-tap";
+            flavor = "balanced";
+            tapping-term-ms = <280>;
+            quick-tap-ms = <175>;
+            #binding-cells = <2>;
+            bindings = <&kp>, <&open_angle_quote>;
+
+            hold-trigger-key-positions = <5 6 7 8 9 15 16 17 18 19 25 26 27 28 29 32 33 30 31>;
+            require-prior-idle-ms = <150>;
+            hold-trigger-on-release;
+            label = "HROA";
+        };
     };
 
     combos {
@@ -142,6 +156,26 @@
         Ralt {
             bindings = <&kp RIGHT_ALT>;
             key-positions = <30 33>;
+        };
+
+        z {
+            bindings = <&kp Z>;
+            key-positions = <21 22>;
+        };
+
+        b {
+            bindings = <&kp B>;
+            key-positions = <23 22>;
+        };
+
+        dot {
+            bindings = <&kp N>;
+            key-positions = <26 27>;
+        };
+
+        k {
+            bindings = <&kp SLASH>;
+            key-positions = <28 27>;
         };
     };
 
@@ -186,7 +220,7 @@
             bindings = <
 &kp F1              &kp F2                   &kp F3               &kp F4               &kp F5     &kp F6        &kp F7         &kp F8         &kp F9             &kp F10
 &hml LGUI NUMBER_1  &hml RIGHT_ALT NUMBER_2  &hml LCTRL NUMBER_3  &hml LSHFT NUMBER_4  &kp N5     &kp NUMBER_6  &hmr RSHFT N7  &hmr RCTRL N8  &hmr RIGHT_ALT N9  &hmr LGUI N0
-&trans              &kp LS(NUMBER_1)         &kp LS(NUMBER_2)     &kp LS(NUMBER_3)     &trans     &trans        &kp LS(N8)     &kp LS(N9)     &kp LS(N0)         &trans
+&trans              &kp LS(NUMBER_1)         &hroa LALT 0         &closed_angle_quote  &trans     &trans        &kp LS(N8)     &kp LS(N9)     &kp LS(N0)         &trans
                                                                   &kp F11              &kp F12    &kp F11       &kp F12
             >;
         };
