@@ -135,44 +135,6 @@
 
         // Combos du hummingbird adaptés
 
-        fast_esc {
-            bindings = <&kp ESCAPE>;
-            key-positions = <12 11>;
-            require-prior-idle-ms = <100>;
-            timeout-ms = <15>;
-        };
-
-        fast_tab {
-            bindings = <&kp TAB>;
-            key-positions = <12 13>;
-            require-prior-idle-ms = <100>;
-            timeout-ms = <15>;
-        };
-
-        fast_enter {
-            bindings = <&kp ENTER>;
-            key-positions = <18 17>;
-            require-prior-idle-ms = <100>;
-            timeout-ms = <15>;
-        };
-
-        fast_backspace {
-            bindings = <&kp BACKSPACE>;
-            key-positions = <17 16>;
-            require-prior-idle-ms = <100>;
-            timeout-ms = <15>;
-        };
-
-        AltGr {
-            bindings = <&sk RIGHT_ALT>;
-            key-positions = <26 27>;
-        };
-
-        Shift {
-            bindings = <&sk LEFT_SHIFT>;
-            key-positions = <28 29>;
-        };
-
         ClrBlutooth {
             bindings = <&bt BT_CLR_ALL>;
             key-positions = <11 12 13>;
@@ -180,38 +142,7 @@
         };
 
         // Combos pour lettres spécifiques du hummingbird
-
-        z {
-            bindings = <&kp Z>;
-            key-positions = <21 22>;
-        };
-
-        b {
-            bindings = <&kp B>;
-            key-positions = <23 22>;
-        };
-
-        dot {
-            bindings = <&kp N>;
-            key-positions = <26 27>;
-        };
-
-        k {
-            bindings = <&kp SLASH>;
-            key-positions = <28 27>;
-        };
-
         // Conserve les BestB et BestDot du cradio
-
-        BestB {
-            bindings = <&kp B>;
-            key-positions = <4 14>;
-        };
-
-        BestDot {
-            bindings = <&kp N>;
-            key-positions = <15 5>;
-        };
     };
 
     macros {
