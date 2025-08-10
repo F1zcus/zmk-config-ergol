@@ -114,7 +114,7 @@
         // Combos du cradio conservés
 
         Esc {
-            bindings = <&mt LEFT_SHIFT ESC>;
+            bindings = <&caps_word>;
             key-positions = <31 30>;
         };
 
@@ -166,6 +166,34 @@
             bindings = <&kp LC(T) &kp T>;
             label = "VIM_CHANGE_WINDOW";
         };
+
+        vim_reduce_x: vim_reduce_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp RA(W)>;
+            label = "VIM_REDUCE_X";
+        };
+
+        vim_increase_x: vim_increase_x {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp RA(E)>;
+            label = "VIM_INCREASE_X";
+        };
+
+        vim_decrease_y: vim_decrease_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp RA(K)>;
+            label = "VIM_DECREASE_Y";
+        };
+
+        vim_increase_y: vim_increase_y {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LC(T) &kp RA(J)>;
+            label = "VIM_INCREASE_Y";
+        };
     };
 
     keymap {
@@ -183,20 +211,20 @@
         nav_layer {
             display-name = "Nav";
             bindings = <
-&trans  &kp RA(X)  &kp Z              &kp RA(C)              &kp LC(T)    &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
-&trans  &trans     &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
-&trans  &trans     &trans             &kp RA(SEMICOLON)      &trans       &kp N     &trans         &trans        &kp SLASH  &trans
-                                      &trans                 &trans       &trans    &lt 2 DELETE
+&vim_increase_y  &kp RA(X)        &kp Z              &kp RA(C)              &kp LC(T)    &kp HOME  &kp PAGE_DOWN  &kp PG_UP     &kp END    &kp PRINTSCREEN
+&vim_reduce_x    &vim_increase_x  &hml LCTRL ESCAPE  &hml LEFT_SHIFT LC(B)  &kp RA(T)    &kp LEFT  &kp DOWN       &kp UP_ARROW  &kp RIGHT  &kp CAPS
+&trans           &vim_decrease_y  &trans             &kp RA(SEMICOLON)      &trans       &trans    &kp RA(W)      &kp RA(E)     &kp RA(J)  &trans
+                                                     &trans                 &trans       &trans    &lt 2 DELETE
             >;
         };
 
         num_layer {
             display-name = "NUMERIC";
             bindings = <
-&kp F1   &kp F2      &kp F3        &kp F4               &kp F5     &kp F6  &kp F7  &kp F8        &kp F9  &kp F10
-&kp N1   &kp N2      &kp N3        &kp N4               &kp N5     &kp N6  &kp N7  &kp N8        &kp N9  &kp N0
-&kp F11  &kp LS(N1)  &hroa LALT 0  &closed_angle_quote  &kp F12    &trans  &kp N8  &hmr LALT N9  &kp N0  &trans
-                                   &trans               &trans     &trans  &trans
+&kp F1  &kp F2      &kp F3        &kp F4               &kp F5    &kp F6  &kp F7   &kp F8        &kp F9   &kp F10
+&kp N1  &kp N2      &kp N3        &kp N4               &kp N5    &kp N6  &kp N7   &kp N8        &kp N9   &kp N0
+&trans  &kp LS(N1)  &hroa LALT 0  &closed_angle_quote  &trans    &trans  &kp F11  &hmr LALT N9  &kp F12  &trans
+                                  &trans               &trans    &trans  &trans
             >;
         };
 
