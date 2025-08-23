@@ -141,6 +141,34 @@
             layers = <3>;
         };
 
+        fast_esc {
+            bindings = <&kp ESC>;
+            key-positions = <11 12>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <125>;
+        };
+
+        fast_tab {
+            bindings = <&kp TAB>;
+            key-positions = <12 13>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <125>;
+        };
+
+        fast_bksp {
+            bindings = <&kp BACKSPACE>;
+            key-positions = <17 16>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <125>;
+        };
+
+        fast_enter {
+            bindings = <&kp ENTER>;
+            key-positions = <17 18>;
+            timeout-ms = <15>;
+            require-prior-idle-ms = <125>;
+        };
+
         // Combos pour lettres spécifiques du hummingbird
         // Conserve les BestB et BestDot du cradio
     };
